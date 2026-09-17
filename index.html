@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A friendly login and sign-up experience for the Plannr productivity dashboard.">
+  <title>Plannr — Welcome</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="brand-panel" aria-label="Plannr introduction">
+      <a class="brand" href="#" aria-label="Plannr home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>plannr.</span>
+      </a>
+
+      <div class="hero-copy">
+        <span class="eyebrow">YOUR DAY, BEAUTIFULLY ORGANIZED</span>
+        <h1>Make room for<br><em>what matters.</em></h1>
+        <p>Plan focused days, build better habits, and celebrate every bit of progress—all in one calm space.</p>
+      </div>
+
+      <div class="preview-card">
+        <div class="preview-header">
+          <div>
+            <span>Today</span>
+            <strong>Monday, May 12</strong>
+          </div>
+          <button aria-label="Add a task">+</button>
+        </div>
+        <div class="progress-row">
+          <div><b>4</b><span>tasks done</span></div>
+          <div class="progress-track"><i></i></div>
+          <strong>72%</strong>
+        </div>
+        <div class="task-list">
+          <div class="task checked"><i>✓</i><span><b>Morning review</b><small>8:30 AM</small></span><em>Focus</em></div>
+          <div class="task"><i></i><span><b>Finish project brief</b><small>10:00 AM</small></span><em class="warm">Work</em></div>
+          <div class="task"><i></i><span><b>Lunch with Olivia</b><small>1:00 PM</small></span><em class="blue">Personal</em></div>
+        </div>
+      </div>
+
+      <p class="quote">“The secret of getting ahead is getting started.” <span>— Mark Twain</span></p>
+      <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="doodle" aria-hidden="true">✦</div>
+    </section>
+
+    <section class="auth-panel">
+      <div class="mobile-brand"><span class="brand-mark"><i></i><i></i><i></i></span>plannr.</div>
+      <div class="auth-card">
+        <div class="tabs" role="tablist" aria-label="Account access">
+          <button class="tab active" id="login-tab" role="tab" aria-selected="true" aria-controls="login-form">Log in</button>
+          <button class="tab" id="signup-tab" role="tab" aria-selected="false" aria-controls="signup-form">Sign up</button>
+        </div>
+
+        <div class="form-heading">
+          <h2 id="form-title">Welcome back</h2>
+          <p id="form-subtitle">Your plans missed you. Let's pick up where you left off.</p>
+        </div>
+
+        <form id="login-form" class="auth-form" aria-labelledby="login-tab">
+          <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+          <label>Password
+            <span class="password-wrap"><input type="password" name="password" placeholder="Enter your password" autocomplete="current-password" minlength="6" required><button class="show-password" type="button" aria-label="Show password">Show</button></span>
+          </label>
+          <div class="form-options"><label class="remember"><input type="checkbox" name="remember"><span></span>Remember me</label><a href="#">Forgot password?</a></div>
+          <button class="primary" type="submit">Log in <span>→</span></button>
+        </form>
+
+        <form id="signup-form" class="auth-form hidden" aria-labelledby="signup-tab">
+          <label>Full name<input type="text" name="name" placeholder="Your name" autocomplete="name" required></label>
+          <label>Email address<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
+          <label>Password
+            <span class="password-wrap"><input type="password" name="password" placeholder="At least 6 characters" autocomplete="new-password" minlength="6" required><button class="show-password" type="button" aria-label="Show password">Show</button></span>
+          </label>
+          <button class="primary" type="submit">Create account <span>→</span></button>
+        </form>
+
+        <div class="divider"><span>or continue with</span></div>
+        <div class="social-row">
+          <button type="button" class="social"><b class="google">G</b>Google</button>
+          <button type="button" class="social"><b class="apple">●</b>Apple</button>
+        </div>
+        <p class="switch-prompt">New to Plannr? <button type="button" id="switch-button">Create an account</button></p>
+        <div class="message" role="status" aria-live="polite"></div>
+      </div>
+      <footer><span>© 2026 Plannr</span><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Help</a></footer>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
